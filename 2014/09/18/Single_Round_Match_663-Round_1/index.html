@@ -3,17 +3,38 @@
 <head>
   <meta charset="utf-8">
   
-  <title>关于本站 | Merlininice&#39; home</title>
+  <title>Single Round Match 663 - Round 1 | Merlininice&#39; home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="这只是一个普通的题解站，请不要有过多的期待。">
+  <meta name="description" content="easy:
+设走的总长度为sum，最长的那一步为max。
+满足两个条件才能达到要求：1、sum &gt;= X 2、sum - max + X &gt;= max
+第一个条件是很显然的。而关键是超出的部分能不能折回来。第二个条件: 根据两边之和大于第三遍这个定理YY一下，多边形如果最长边小于等于其他边的和，多边形肯定是存在的的。
+code
+medium
+hard
+2-sat，和SRM630的har">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于本站">
-<meta property="og:url" content="http://yoursite.com/2014/09/17/main/">
+<meta property="og:title" content="Single Round Match 663 - Round 1">
+<meta property="og:url" content="http://yoursite.com/2014/09/18/Single_Round_Match_663-Round_1/">
 <meta property="og:site_name" content="Merlininice' home">
-<meta property="og:description" content="这只是一个普通的题解站，请不要有过多的期待。">
+<meta property="og:description" content="easy:
+设走的总长度为sum，最长的那一步为max。
+满足两个条件才能达到要求：1、sum &gt;= X 2、sum - max + X &gt;= max
+第一个条件是很显然的。而关键是超出的部分能不能折回来。第二个条件: 根据两边之和大于第三遍这个定理YY一下，多边形如果最长边小于等于其他边的和，多边形肯定是存在的的。
+code
+medium
+hard
+2-sat，和SRM630的har">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于本站">
-<meta name="twitter:description" content="这只是一个普通的题解站，请不要有过多的期待。">
+<meta name="twitter:title" content="Single Round Match 663 - Round 1">
+<meta name="twitter:description" content="easy:
+设走的总长度为sum，最长的那一步为max。
+满足两个条件才能达到要求：1、sum &gt;= X 2、sum - max + X &gt;= max
+第一个条件是很显然的。而关键是超出的部分能不能折回来。第二个条件: 根据两边之和大于第三遍这个定理YY一下，多边形如果最长边小于等于其他边的和，多边形肯定是存在的的。
+code
+medium
+hard
+2-sat，和SRM630的har">
 
   
     <link rel="alternative" href="/atom.xml" title="Merlininice&#39; home" type="application/atom+xml">
@@ -104,14 +125,16 @@
 		</header>				
 	</div>
 </nav>
-      <article id="post-main" class="article article-type-post" itemscope itemprop="blogPost">
+      <article id="post-Single_Round_Match_663-Round_1" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2014/09/17/main/" class="article-date">
-  	<time datetime="2014-09-17T15:11:52.000Z" itemprop="datePublished">Sep 17 2014</time>
+      <a href="/2014/09/18/Single_Round_Match_663-Round_1/" class="article-date">
+  	<time datetime="2014-09-17T16:47:00.000Z" itemprop="datePublished">Sep 18 2014</time>
 </a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/topcoder/">topcoder</a></li></ul>
+
     </div>
   
   <div class="article-inner">
@@ -120,7 +143,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      关于本站
+      Single Round Match 663 - Round 1
     </h1>
   
 
@@ -128,7 +151,23 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>这只是一个普通的题解站，请不要有过多的期待。</p>
+        <h2 id="easy:">easy:</h2>
+<p>设走的总长度为sum，最长的那一步为max。</p>
+<p>满足两个条件才能达到要求：<br><br>1、sum &gt;= X <br><br>2、sum - max + X &gt;= max<br></p>
+<p>第一个条件是很显然的。<br><br>而关键是超出的部分能不能折回来。<br><br>第二个条件: <br><br>根据两边之和大于第三遍这个定理YY一下，多边形如果最长边小于等于其他边的和，多边形肯定是存在的的。</p>
+<p><a href="https://github.com/Merlininice/topcoder/blob/master/SRM633/easy.cpp" target="_blank" rel="external">code</a></p>
+<h2 id="medium">medium</h2>
+<h2 id="hard">hard</h2>
+<p>2-sat，和SRM630的hard一样的做法。</p>
+<hr>
+<h3 id="做法:">做法:</h3>
+<p>对于每个素数单独分析。</p>
+<p>建图：</p>
+<p>每个数先建k个点，表示这个数的素因子中，当前素数出现大于等于k次。<br><br>每个点的相对点就表示当前素数出现次数小于k次。<br><br>然后连一下边：比如选了大于等于k次，肯定要选大于等于k-1次。</p>
+<p>对于gcd和lcm：<br></p>
+<p>设两个数的gcd中当前素数个数为x；a中包含当前素数个数为na，b中包含当前素数个数为nb<br><br>1、a &gt;= x， b &gt;= x。<br>2、如果 a &gt;= x+1，那么 b &lt; x+1；如果 b &gt;= x+1，那么 b &lt; x+1。</p>
+<p>lcm也是一样的。</p>
+<p><a href="https://github.com/Merlininice/topcoder/blob/master/SRM633/hard.cpp" target="_blank" rel="external">code</a></p>
 
       
     </div>
@@ -141,15 +180,11 @@
     
 <nav id="article-nav">
   
-    <a href="/2014/09/18/Single_Round_Match_663-Round_1/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          Single Round Match 663 - Round 1
-        
-      </div>
-    </a>
   
+    <a href="/2014/09/17/main/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">关于本站</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
   
 </nav>
 
@@ -176,7 +211,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="main" data-title="关于本站" data-url="http://yoursite.com/2014/09/17/main/"></div>
+	<div class="ds-thread" data-thread-key="Single_Round_Match_663-Round_1" data-title="Single Round Match 663 - Round 1" data-url="http://yoursite.com/2014/09/18/Single_Round_Match_663-Round_1/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
