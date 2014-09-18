@@ -6,29 +6,32 @@
   <title>Single Round Match 663 - Round 1 | Merlininice&#39; home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="easy:
-设走的总长度为sum，最长的那一步为max。满足两个条件才能达到要求：1、sum &gt;= X 2、sum - max + X &gt;= max第一个条件是很显然的。而关键是超出的部分能不能折回来。第二个条件: 根据两边之和大于第三遍这个定理YY一下，多边形如果最长边小于等于其他边的和，多边形肯定是存在的的。
+设走的总长度为sum，最长的那一步为max。满足两个条件才能达到要求：1、sum &gt;= X2、sum - max + X &gt;= max第一个条件是很显然的。而关键是超出的部分能不能折回来。第二个条件:根据两边之和大于第三遍这个定理YY一下，多边形如果最长边小于等于其他边的和，多边形肯定是存在的的。
 code
 medium
+待补
 hard
-2-sat，和SRM630的hard一">
+2-sat，和SRM630的hard">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Single Round Match 663 - Round 1">
 <meta property="og:url" content="http://yoursite.com/2014/09/18/Single_Round_Match_663-Round_1/">
 <meta property="og:site_name" content="Merlininice' home">
 <meta property="og:description" content="easy:
-设走的总长度为sum，最长的那一步为max。满足两个条件才能达到要求：1、sum &gt;= X 2、sum - max + X &gt;= max第一个条件是很显然的。而关键是超出的部分能不能折回来。第二个条件: 根据两边之和大于第三遍这个定理YY一下，多边形如果最长边小于等于其他边的和，多边形肯定是存在的的。
+设走的总长度为sum，最长的那一步为max。满足两个条件才能达到要求：1、sum &gt;= X2、sum - max + X &gt;= max第一个条件是很显然的。而关键是超出的部分能不能折回来。第二个条件:根据两边之和大于第三遍这个定理YY一下，多边形如果最长边小于等于其他边的和，多边形肯定是存在的的。
 code
 medium
+待补
 hard
-2-sat，和SRM630的hard一">
+2-sat，和SRM630的hard">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Single Round Match 663 - Round 1">
 <meta name="twitter:description" content="easy:
-设走的总长度为sum，最长的那一步为max。满足两个条件才能达到要求：1、sum &gt;= X 2、sum - max + X &gt;= max第一个条件是很显然的。而关键是超出的部分能不能折回来。第二个条件: 根据两边之和大于第三遍这个定理YY一下，多边形如果最长边小于等于其他边的和，多边形肯定是存在的的。
+设走的总长度为sum，最长的那一步为max。满足两个条件才能达到要求：1、sum &gt;= X2、sum - max + X &gt;= max第一个条件是很显然的。而关键是超出的部分能不能折回来。第二个条件:根据两边之和大于第三遍这个定理YY一下，多边形如果最长边小于等于其他边的和，多边形肯定是存在的的。
 code
 medium
+待补
 hard
-2-sat，和SRM630的hard一">
+2-sat，和SRM630的hard">
 
   
     <link rel="alternative" href="/atom.xml" title="Merlininice&#39; home" type="application/atom+xml">
@@ -146,17 +149,18 @@ hard
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="easy:">easy:</h2>
-<p>设走的总长度为sum，最长的那一步为max。<br><br>满足两个条件才能达到要求：<br><br>1、sum &gt;= X <br><br>2、sum - max + X &gt;= max<br>第一个条件是很显然的。<br><br>而关键是超出的部分能不能折回来。<br><br>第二个条件: <br><br>根据两边之和大于第三遍这个定理YY一下，多边形如果最长边小于等于其他边的和，多边形肯定是存在的的。</p>
+<p>设走的总长度为sum，最长的那一步为max。<br>满足两个条件才能达到要求：<br>1、sum &gt;= X<br>2、sum - max + X &gt;= max<br>第一个条件是很显然的。<br>而关键是超出的部分能不能折回来。<br>第二个条件:<br>根据两边之和大于第三遍这个定理YY一下，多边形如果最长边小于等于其他边的和，多边形肯定是存在的的。</p>
 <p><a href="https://github.com/Merlininice/topcoder/blob/master/SRM633/easy.cpp" target="_blank" rel="external">code</a></p>
 <h2 id="medium">medium</h2>
+<p>待补</p>
 <h2 id="hard">hard</h2>
 <p>2-sat，和SRM630的hard一样的做法。</p>
 <p><strong>做法:</strong></p>
 <p>对于每个素数单独分析。</p>
-<p>建图：<br></p>
-<p>每个数先建k个点，表示这个数的素因子中，当前素数出现大于等于k次。<br><br>每个点的相对点就表示当前素数出现次数小于k次。<br><br>然后连一下边：比如选了大于等于k次，肯定要选大于等于k-1次。</p>
-<p>对于gcd和lcm：<br></p>
-<p>设两个数的gcd中当前素数个数为x；a中包含当前素数个数为na，b中包含当前素数个数为nb<br><br>1、a &gt;= x， b &gt;= x。<br>2、如果 a &gt;= x+1，那么 b &lt; x+1；如果 b &gt;= x+1，那么 b &lt; x+1。</p>
+<p>建图：</p>
+<p>每个数先建k个点，表示这个数的素因子中，当前素数出现大于等于k次。<br>每个点的相对点就表示当前素数出现次数小于k次。<br>然后连一下边：比如选了大于等于k次，肯定要选大于等于k-1次。</p>
+<p>对于gcd和lcm：</p>
+<p>设两个数的gcd中当前素数个数为x；a中包含当前素数个数为na，b中包含当前素数个数为nb<br>1、a &gt;= x， b &gt;= x。<br>2、如果 a &gt;= x+1，那么 b &lt; x+1；如果 b &gt;= x+1，那么 b &lt; x+1。</p>
 <p>lcm也是一样的。</p>
 <p><a href="https://github.com/Merlininice/topcoder/blob/master/SRM633/hard.cpp" target="_blank" rel="external">code</a></p>
 
