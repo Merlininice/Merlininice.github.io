@@ -532,8 +532,8 @@ a {
   position: relative;
 }
 .archives .archive-article {
-  margin-left: 200px;
-  padding: 20px 0;
+  margin-left: 100px;
+  padding: 10px 0;
   border-bottom: 1px solid #eee;
   border-top: 1px solid #fff;
   position: relative;
@@ -641,7 +641,7 @@ a {
 }
 .article {
   margin: 30px 40px 30px 40px;
-  padding: 30px 75px 30px 40px;
+  padding: 30px 75px 30px 50px;
   position: relative;
   border-bottom: 1px solid #ddd;
   background: #fff;
@@ -957,8 +957,8 @@ a {
   position: relative;
 }
 .archives .archive-article {
-  margin-left: 200px;
-  padding: 20px 0;
+  margin-left: 100px;
+  padding: 10px 0;
   border-bottom: 1px solid #eee;
   border-top: 1px solid #fff;
   position: relative;
